@@ -78,3 +78,4 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ screenshot-tool/node_modules/electron/dist/electron
+screenshot-tool/node_modules/electron/dist/electron
