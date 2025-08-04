@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+
+        .capture-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .capture-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .capture-btn:active {
+            transform: translateY(0);
+        }
+
+        .status {
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+            min-height: 16px;
+        }
+
+        .success {
+            color: #4CAF50;
+            opacity: 1;
+        }
+
+        .error {
+            color: #f44336;
+            opacity: 1;
+        }
+
+        .instructions {
+            margin-top: 15px;
+            font-size: 11px;
+            opacity: 0.6;
+            line-height: 1.4;
+        }
+
+        .save-path {
+            margin-top: 10px;
+            font-size: 10px;
+            opacity: 0.5;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Screenshot Tool</h1>
+        <p class="subtitle">One-click screen capture</p>
+        
+        <button class="capture-btn" id="captureBtn">
+            Take Screenshot
+        </button>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="instructions">
+            <div>💡 <strong>Tips:</strong></div>
+            <div>• Click tray icon for quick capture</div>
+            <div>• Use Ctrl+Shift+S shortcut</div>
+            <div>• Files saved as DDMMYYYYMMMHH.png</div>
+        </div>
+        
+        <div class="save-path" id="savePath"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
