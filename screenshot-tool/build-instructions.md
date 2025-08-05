@@ -75,6 +75,18 @@ When users install your app:
 
 ## Troubleshooting Build Issues
 
+**Error: "libgobject-2.0.so.0: No such file" (Linux)**
+```bash
+# Ubuntu/Debian:
+sudo apt-get install libglib2.0-dev libgtk-3-dev
+
+# CentOS/RHEL:
+sudo yum install glib2-devel gtk3-devel
+
+# Fedora:
+sudo dnf install glib2-devel gtk3-devel
+```
+
 **Error: "electron-builder not found"**
 ```bash
 npm install -g electron-builder
@@ -87,6 +99,10 @@ npm install -g electron-builder
 **Build fails on Windows:**
 - Run Command Prompt as Administrator
 - Ensure Windows SDK is installed
+
+**Linux Display Issues:**
+- Ensure you're running in a graphical environment (not headless)
+- Install: `sudo apt-get install xvfb` for headless testing
 
 **Large file size?**
 - This is normal - Electron bundles Chrome runtime
