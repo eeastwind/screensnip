@@ -8,19 +8,34 @@
    - Download from: https://nodejs.org/
    - Install the LTS version (v18 or higher recommended)
 
-3. **Open Command Prompt/Terminal** in the screenshot-tool folder
+3. **Linux Users - Install Required System Libraries:**
+   ```bash
+   # Ubuntu/Debian:
+   sudo apt-get update
+   sudo apt-get install libgtk-3-dev libgconf-2-4 libnss3-dev libxss1 libasound2-dev libxtst6 libatspi2.0-0 libdrm2 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libxkbcommon0
 
-4. **Install dependencies:**
+   # CentOS/RHEL/Fedora:
+   sudo yum install gtk3-devel libXScrnSaver alsa-lib
+   # OR for newer versions:
+   sudo dnf install gtk3-devel libXScrnSaver alsa-lib
+
+   # Arch Linux:
+   sudo pacman -S gtk3 libxss alsa-lib
+   ```
+
+4. **Open Command Prompt/Terminal** in the screenshot-tool folder
+
+5. **Install dependencies:**
    ```bash
    npm install
    ```
 
-5. **Test the app:**
+6. **Test the app:**
    ```bash
    npm start
    ```
 
-6. **Build the installer:**
+7. **Build the installer:**
    ```bash
    npm run build
    ```
